@@ -12,7 +12,6 @@ class SignUpForm(forms.ModelForm):
         model = SignUp
         fields = ['full_name', 'email']
 
-    #Delete this validation if you want to accept all email types.
     def clean_email(self):
         email = self.cleaned_data.get('email')
         email_base, provider = email.split('@')
