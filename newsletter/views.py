@@ -30,13 +30,19 @@ def home(request):
 
 #renders the request, view, and context.
     return render(request, "home.html", context)
+#End of Home View.
 
+#Start of Contact View
 def contact(request):
     form = ContactForm(request.POST or None)
     if form.is_valid():
-        print form.cleaned_data
+        email = form.cleaned_data.get("email")
+        full_name = form.cleaned_data.get("full_name")
+        message = form.cleaned_data.get("message")
+        print email, message, full_name
 
     context = {
         "form": form,
     }
+
     return render(request, "forms.html", context)
