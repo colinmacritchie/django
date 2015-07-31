@@ -1,0 +1,2 @@
+# django
+Django Marketing MVP
