@@ -36,9 +36,8 @@ def home(request):
 def contact(request):
     form = ContactForm(request.POST or None)
     if form.is_valid():
-        for key in form.cleaned_data:
-            print key
-            print form.cleaned_data.get(key)
+        for key, value in form.cleaned_data.iteritems():
+            print key, value
 
     context = {
         "form": form,
