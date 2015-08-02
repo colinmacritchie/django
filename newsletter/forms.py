@@ -18,7 +18,7 @@ class SignUpForm(forms.ModelForm):
         email_base, provider = email.split('@')
         domain, extension = provider.split('.')
         if not extension == "edu":    #Change this to whatever.
-            raise forms.ValidationError("Please use a valid gmail email address") #Change message here.
+            raise forms.ValidationError("Please use a valid .edu email address") #Change message here.
         return email
 
 class ApplicationNew(forms.ModelForm):
