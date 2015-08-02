@@ -1,11 +1,12 @@
 from django import forms
+from django.forms import extras
 from .models import SignUp
+
 
 class ContactForm(forms.Form):
     full_name = forms.CharField()
     email = forms.EmailField()
     message = forms.CharField()
-
 
 class SignUpForm(forms.ModelForm):
     class Meta:

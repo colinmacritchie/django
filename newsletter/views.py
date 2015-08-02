@@ -1,7 +1,7 @@
 from django.conf import settings
 from django.core.mail import send_mail
 from django.shortcuts import render
-from .forms import SignUpForm, ContactForm
+from .forms import SignUpForm, ContactForm, ApplicationForm
 # Create your views here.
 
 #Function that displays and saves the form.
