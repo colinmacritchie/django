@@ -60,3 +60,9 @@ def contact(request):
     }
 
     return render(request, "forms.html", context)
+
+
+def ApplicationNew(request):
+    form = ApplicationNew(request.POST or None)
+    if form.is_valid():
+            

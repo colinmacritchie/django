@@ -15,7 +15,7 @@ class SignUp(models.Model):
 # New Application Model.
 class ApplicationNew(models.Model):
     full_name = models.CharField(max_length=120, blank=True, null=True)
-    email = model.EmailField()
+    email = models.EmailField()
     description = models.CharField(max_length=1000, blank=True, null=False)
     description2 = models.CharField(max_length=600, blank=True, null=False)
     timestamp = models.DateTimeField(auto_now_add=True, auto_now=False)

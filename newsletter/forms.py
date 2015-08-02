@@ -1,6 +1,6 @@
 from django import forms
 from django.forms import extras
-from .models import SignUp
+from .models import SignUp, ApplicationNew
 
 
 class ContactForm(forms.Form):
@@ -17,6 +17,19 @@ class SignUpForm(forms.ModelForm):
         email = self.cleaned_data.get('email')
         email_base, provider = email.split('@')
         domain, extension = provider.split('.')
-        #if not extension == "gmail":    #Change this to whatever.
-            #raise forms.ValidationError("Please use a valid gmail email address") #Change message here.
+        if not extension == "edu":    #Change this to whatever.
+            raise forms.ValidationError("Please use a valid gmail email address") #Change message here.
+        return email
+
+class ApplicationNew(forms.ModelForm):
+    class Meta:
+        model = ApplicationNew
+        fields = ['full_name', 'email', 'description', 'description2', 'address', 'zipcode', 'state', 'city', 'country']
+
+    def clean_email(self):
+        email = self.cleaned_data.get('email')
+        email_base, provider = email.split('@')
+        domain, extension = provider.split('.')
+        if not extension == "edu":
+            raise forms.ValidationError("Please use a valud .edu email")
         return email
