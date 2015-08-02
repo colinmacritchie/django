@@ -12,7 +12,7 @@ class SignUp(models.Model):
     def __unicode__(self): #Python 3.3 is __str__
         return self.email
 
-
+# New Application Model.
 class ApplicationNew(models.Model):
     full_name = models.CharField(max_length=120, blank=True, null=True)
     email = model.EmailField()
@@ -24,6 +24,6 @@ class ApplicationNew(models.Model):
     state = models.CharField(max_length=10, blank=True, null=False)
     city = models.CharField(max_length=50, blank=True, null=False)
     country = models.CharField(max_length=50, blank=True, null=False)
-    
+
     def __unicode__(self): #Python 3.3 is __str__
         return self.full_name
