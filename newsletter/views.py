@@ -1,7 +1,7 @@
 from django.conf import settings
 from django.core.mail import send_mail
 from django.shortcuts import render
-from .forms import SignUpForm, ContactForm, ApplicationForm
+from .forms import SignUpForm, ContactForm
 # Create your views here.
 
 #Function that displays and saves the form.
@@ -60,9 +60,3 @@ def contact(request):
     }
 
     return render(request, "forms.html", context)
-
-
-def ApplicationNew(request):
-    form = ApplicationNew(request.POST or None)
-    if form.is_valid():
-            
