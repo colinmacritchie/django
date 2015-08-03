@@ -1,6 +1,6 @@
 from django import forms
 from django.forms import extras
-from .models import SignUp,
+from .models import SignUp
 
 
 class ContactForm(forms.Form):
