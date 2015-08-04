@@ -14,9 +14,10 @@
   </p>
 </div>
 {% endblock %}
-
 <!-- Block Content -->
 {% block content %}
+<div class="row">
+  <div class="col-md-4">
 <h1>{{ title }}</h1>
 <form method='POST' action=''>{% csrf_token %}
   {{ form|crispy }}
@@ -25,3 +26,6 @@
 
 </form>
 {% endblock %}
+
+  </div>
+</div>
