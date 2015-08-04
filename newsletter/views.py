@@ -31,7 +31,7 @@ def home(request):
         }
 
 #renders the request, view, and context.
-    return render(request, "base.html", context)
+    return render(request, "home.html", context)
 #End of Home View.
 
 #Start of Contact View
