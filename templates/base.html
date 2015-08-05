@@ -21,17 +21,19 @@
 
     {% include 'navbar.html' %}
 
+<div class="container-fluid">
 
-    <div class="container">
+    <div class="jumbotron">
 
 <!-- Main component for a primary marketing message or call to action -->
     {% block jumbotron %}
     {% endblock %}
 
-    {% block content %}
-    {% endblock %}
+  </div> <!-- End Of JumboTron -->
 
-  </div> <!-- /container -->
+  {% block content %}
+  {% endblock %}
+</div> <!-- /container -->
 
   {% include "javascript.html" %}
 
